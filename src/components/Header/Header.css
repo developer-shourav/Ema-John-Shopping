@@ -2,5 +2,18 @@
     height: 80px;
     background-color: #1C2B35;
     display: flex;
+    justify-content:space-between;
+    padding: 0 100px;
+    align-items: center;
 
+}
+
+nav.header a{
+    text-decoration: none;
+    color: #fff;
+    margin-left: 30px;
+}
+
+nav.header a:hover{
+    color: orange;
 }
