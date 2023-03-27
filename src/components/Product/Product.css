@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
 .product{
     width: 300px;
     height: 510px;
@@ -11,4 +11,23 @@
     height: 286px;
     margin: 7px;
     border-radius: 8px; 
+}
+
+.product-name{
+    margin: 0;
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 21px;
+    line-height: 25px;
+    letter-spacing: 0.0015em;
+    color: #0E161A;
+}
+
+.product-info{
+    margin-left: 14px;
+}
+
+.product-info p{
+    margin-top: 5px;
 }
