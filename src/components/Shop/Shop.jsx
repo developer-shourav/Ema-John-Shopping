@@ -4,6 +4,12 @@ import './Shop.css';
 
 const Shop = () => {
     const [products, setProducts] = useState([]);
+ 
+
+    const handleAddToCart = (product) => {
+        console.log(product);
+    }
+
     useEffect( () => {
        fetch('fakeData/products.json')
        .then( res => res.json())
@@ -17,6 +23,7 @@ const Shop = () => {
                 products.map(product => <Product
                      key={product.id}
                      product={product}
+                     handleAddToCart = {handleAddToCart}
                      > </Product>)
              }
             </div>
