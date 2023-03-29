@@ -4,10 +4,13 @@ import './Shop.css';
 
 const Shop = () => {
     const [products, setProducts] = useState([]);
+    const [cart, setCart] = useState([]);
  
 
     const handleAddToCart = (product) => {
-        console.log(product);
+        const newCart = [...cart, product];
+        console.log(newCart);
+        setCart(newCart)
     }
 
     useEffect( () => {
@@ -29,7 +32,8 @@ const Shop = () => {
             </div>
 
             <div className="cart-container">
-              <h4>Order Summery</h4>
+              <h4>Order Summery </h4>
+              <p>Selected Items :{cart.length}</p>
             </div>
             
         </div>
