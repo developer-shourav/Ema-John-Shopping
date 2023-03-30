@@ -22,7 +22,7 @@ const Shop = () => {
        .then( data => setProducts(data))
     },  []);
 
-/*     useEffect( () => {
+    useEffect( () => {
         const storedCart = getShoppingCart();
         const storedProduct = [];
         setCartStoredProduct(storedProduct)
@@ -44,30 +44,7 @@ const Shop = () => {
 
     }, [products]);
 
-    console.log(cartStoredProduct); */
-
-
-    useEffect( ( ) => {
-        const storedCart = getShoppingCart();
-        const storedProduct = [] ;
-        setCartStoredProduct(storedProduct);
-        for( const id in storedCart){
-            const eachProduct = products.find( product => product.id === id);
-            const productsQuantity = storedCart[id];
-
-            if(eachProduct){
-                eachProduct.quantity = productsQuantity;
-            }
-
-            storedProduct.push(eachProduct);
-
-
-        }
-
-
-    }, [products])
-console.log(cartStoredProduct);
-
+    console.log(cartStoredProduct);
 
 
     return (
