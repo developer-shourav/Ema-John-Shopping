@@ -7,6 +7,7 @@ import './Shop.css';
 const Shop = () => {
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState([]);
+    const [cartStoredProduct, setCartStoredProduct] = useState([]);
  
 
     const handleAddToCart = (product) => {
@@ -21,9 +22,10 @@ const Shop = () => {
        .then( data => setProducts(data))
     },  []);
 
-    useEffect( () => {
+/*     useEffect( () => {
         const storedCart = getShoppingCart();
         const storedProduct = [];
+        setCartStoredProduct(storedProduct)
         // Step 1: Get Id
         for( const id in storedCart){
             // Step 2: Get the product by using the ID
@@ -35,10 +37,37 @@ const Shop = () => {
             if (addedProduct) {
                 addedProduct.quantity = productQuantity ;
             }
-            console.log(addedProduct);
+            storedProduct.push(addedProduct);
         }
 
+        
+
     }, [products]);
+
+    console.log(cartStoredProduct); */
+
+
+    useEffect( ( ) => {
+        const storedCart = getShoppingCart();
+        const storedProduct = [] ;
+        setCartStoredProduct(storedProduct);
+        for( const id in storedCart){
+            const eachProduct = products.find( product => product.id === id);
+            const productsQuantity = storedCart[id];
+
+            if(eachProduct){
+                eachProduct.quantity = productsQuantity;
+            }
+
+            storedProduct.push(eachProduct);
+
+
+        }
+
+
+    }, [products])
+console.log(cartStoredProduct);
+
 
 
     return (
