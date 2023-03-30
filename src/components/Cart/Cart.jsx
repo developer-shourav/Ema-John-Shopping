@@ -11,10 +11,17 @@ const Cart = ({cart}) => {
     }
     const tax = (totalPrice*7) / 100;
     const grandTotal = totalPrice + totalShipping + tax ;
+
+    // Total items calculation
+
+    let totalItemsQuantity = 0;
+    for( const item of cart){
+      totalItemsQuantity = totalItemsQuantity + item?.quantity;
+    }
   return (
     <div className="cart">
       <h3>Order Summery </h3>
-      <p>Selected Items :{cart?.length}</p>
+      <p>Selected Items :{totalItemsQuantity}</p>
       <p>Total Price: ${totalPrice.toFixed(2)}</p>
       <p>Total Shipping Charge: ${totalShipping.toFixed(2)}</p>
       <p>Tax(7%): ${tax.toFixed(2)}</p>
