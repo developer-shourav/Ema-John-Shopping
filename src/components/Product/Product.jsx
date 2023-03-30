@@ -9,7 +9,8 @@ const Product = (props) => {
     const handleAddToCart = props.handleAddToCart;
     return (
       <div className="product">
-        <img src={img} alt="" />
+        <img onError={ (e) =>  e.currentTarget.src ="https://shorten.world/PEz26"}  src={img} alt="" />
+
 
         <div className="product-info">
           <h6 className="product-name">{name}</h6>
