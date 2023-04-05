@@ -10,6 +10,7 @@ import {
 import Shop from './components/Shop/Shop';
 import Home from './components/Layout/Home';
 import Orders from './components/Orders/Orders';
+import Inventory from './components/Inventory/Inventory';
 
 const router = createBrowserRouter([
   {
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path:'orders',
         element:<Orders> </Orders>
+      },
+      {
+        path:'inventory',
+        element: <Inventory> </Inventory>
       },
     ]
   },
