@@ -5,7 +5,7 @@ const ReviewItem = ({product}) => {
     const {img, price, category, name, quantity, shipping} = product;
     return (
         <div className='review-item'>
-            <h2>Review Items</h2>
+            <img src={img} alt="" />
         </div>
     );
 };
