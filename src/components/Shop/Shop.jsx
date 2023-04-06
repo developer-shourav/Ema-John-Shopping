@@ -4,7 +4,8 @@ import Cart from '../Cart/Cart';
 import Product from '../Product/Product';
 import './Shop.css';
 import { Link } from 'react-router-dom';
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 const Shop = () => {
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState([]);
@@ -79,8 +80,8 @@ const Shop = () => {
                 cart={cart}
                 handleClearCart={handleClearCart}
                 >
-                    <Link to='/orders'>
-                        <button>Review Order</button>
+                    <Link className='proceed-link' to='/orders'>
+                        <button className='btn-proceed'> <span> Review Order</span> <FontAwesomeIcon icon={faArrowRight} /> </button>
                     </Link>
                 </Cart>
             </div>

@@ -1,3 +1,18 @@
 .review-container{
     margin: 50px auto;
 }
+
+.btn-proceed{
+    width: 100%;
+    background-color: #ff9900;
+    border-radius: 4px;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none;
+}
+
+.proceed-link{
+    text-decoration: none;
+}
